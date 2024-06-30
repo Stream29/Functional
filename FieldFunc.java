@@ -3,7 +3,7 @@ package functional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public interface FieldFunc<Self>
+public interface FieldFunc<Self extends FieldFunc<Self>>
 {
     public default Self also(Consumer<Self> block)
     {
